@@ -45,7 +45,148 @@
 			<h2>
 				BLOCK elements
 			</h2>
-			<p></p>
+			<p>Block elements provide the main structure of the page. They consume the entire width available to them.</p>
+			<div class="subsection">
+				<h3>Headings</h3>
+				<p>We repressent headings with the <code>&lt;h1&gt;</code> element. The number represents the headings importance. 1 is the most impostant and 6 the least.</p>
+				<table>
+					<tbody>
+						<tr>
+							<th>Code</th>
+							<th>Result</th>
+						</tr>
+						<tr>
+							<td>
+								<code>&lt;h1&gt;Header 1&lt;/h1&gt;</code>
+							</td>
+							<td>
+								<h1>Header 1</h1>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<code>&lt;h2&gt;Header 2&lt;/h2&gt;</code>
+							</td>
+							<td>
+								<h2>Header 2</h2>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<code>&lt;h3&gt;Header 3&lt;/h3&gt;</code>
+							</td>
+							<td>
+								<h3>Header 3</h3>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<code>&lt;h4&gt;Header 4&lt;/h4&gt;</code>
+							</td>
+							<td>
+								<h4>Header 4</h4>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<code>&lt;h5&gt;Header 5&lt;/h5&gt;</code>
+							</td>
+							<td>
+								<h5>Header 5</h5>
+							</td>
+						</tr>
+							<tr>
+							<td>
+								<code>&lt;h6&gt;Header 6&lt;/h6&gt;</code>
+							</td>
+							<td>
+								<h6>Header 6</h6>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="subsection">
+				<h3>Divisions</h3>
+				<p>The div element is used for parts of the document that can't be semantically described by other html block elements. It is usually used in combination with a class or id attribute.</p>
+				<code>&lt;div class="article"&gt;<br/>
+					&nbsp;&nbsp;&nbsp;Some very exciting news!<br/>
+					&lt;/div&gt;</code>
+			</div>
+			<div class="subsection"> 
+				<h3>Paragraphs</h3>
+				<p>The paragraph element encloses paragraphs.</p>
+				<code>&lt;p&gt;<br/>
+					&nbsp;&nbsp;&nbsp;This is a paragraph.<br/>
+					&lt;/p&gt;</code>
+			</div>
+			<div class="subsection">
+				<h3>Tables</h3>
+				<p>A table in html contains 1  or more rows and 1 or more columns. In xhtml the rows should be inside a <code>&lt;tbody&gt;</code></p>
+				<table>
+					<tbody>
+						<tr>
+							<th>Code</th>
+							<th>Result</th>
+						</tr>
+						<tr>
+							<td><code>
+								&lt;table&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&lt;tbody&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Col 1&lt;/th&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Col 2&lt;/th&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;td&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	row 1, col 1<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;/td&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;td&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	row 1, col 2<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;/td&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;td&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	row 2, col 1<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;/td&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;td&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	row 2, col 2<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;/td&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;<br/>
+								&lt;table&gt;<br/>
+							</code></td>
+							<td>
+								<table>
+									<tbody>
+										<tr>
+											<th>col 1</th>
+											<th>col 2</th>
+										</tr>
+										<tr>	
+											<td>
+												row 1, col 1
+											</td>
+											<td>
+												row 1, col 2
+											</td>
+										</tr>
+										<tr>	
+											<td>
+												row 2, col 1
+											</td>
+											<td>
+												row 2, col 2
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				
+			</div>
 		</div>
 		<div class="section">
 			<h2>
