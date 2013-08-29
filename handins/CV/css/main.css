@@ -1,0 +1,80 @@
+* {
+	margin:0;
+	padding: 0;
+}
+
+body {
+
+}
+
+.topBar {
+	height: 44px;
+	width: 100%;
+	background-color: gray;
+	position: fixed;
+	top:0;
+	left:0;
+	z-index: 20;
+}
+
+.topBackgroundImageContainer {
+	height: 400px;
+	width: 100%;
+	background-image: url("../img/background-blue.jpg");
+	background-size: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 4;
+}
+
+.mainContentContainer {
+	width: 100%;
+	position: relative;
+	top:400px;
+	/*background:white;*/
+	z-index: 10;
+}
+
+.centeredMainContainer {
+	max-width: 920px;
+	background:white;
+	margin: auto auto;
+	border-radius: 30px;
+}
+.header {
+	position:relative;
+	top:-100px;
+	width: 100%;
+
+	/*background: red;*/
+}
+
+.header hr {
+	width: 90%;
+	margin: auto auto;
+	border: none;
+	background: #CCC;
+	height: 2px;
+}
+
+.topImage {
+	position:relative;
+	/*top:-100px;*/
+	left: 20px;
+	width: 300px;
+}
+
+.mainTitle {
+	font-family: helvetica;
+	font-size: 75px;
+	position:relative;
+	top:-50px;
+	display: inline-block;
+	left:40px;
+
+}
+
+
+
+
