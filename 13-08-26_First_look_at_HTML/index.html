@@ -8,190 +8,328 @@
 	</title>
 </head>
 <body>
-	<div class="section">
+	<div class="section" id="doctype">
 		<h2>
-			!DOCKTYPES
+			!DOCTYPES
 		</h2>
 		<p>
 			Doctypes appear at the very top of the page. They tell the browser how the HTML on your page should be interpreted.
 		</p>
-			<!-- <ul>
-			<li> -->
-				<div class="subsection">
-					<h3>
-						XHTML 1.1
-					</h3>
-					<p>
-						XHTML 1.1 is a form of xml and the strictest doctype. Forcing xml rules on the document. The browser doesn't care though.
-					</p><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;<br/>
-					&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;<br/>
-					&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</code>
-				</div>
-			<!-- </li>
-			<li> -->
-				<div class="subsection"> 
-					<h3>HTML5</h3>
-					<p>The HTML5 doctype allowes code to be written far more loosely.</p>
-					<code>
-						&lt;!DOCTYPE html&gt;
-						<br/>
-						&lt;html&gt;
-					</code>
-				</div>
-<!-- 			</li>
-</ul> -->
-</div>
-<div class="section">
-	<h2>
-		BLOCK elements
-	</h2>
-	<p>Block elements provide the main structure of the page. They consume the entire width available to them.</p>
-	<div class="subsection">
-		<h3>Headings</h3>
-		<p>We repressent headings with the <code>&lt;h1&gt;</code> element. The number represents the headings importance. 1 is the most impostant and 6 the least.</p>
-		<table>
-			<tbody>
-				<tr>
-					<th>Code</th>
-					<th>Result</th>
-				</tr>
-				<tr>
-					<td>
-						<code>&lt;h1&gt;Header 1&lt;/h1&gt;</code>
-					</td>
-					<td>
-						<h1>Header 1</h1>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<code>&lt;h2&gt;Header 2&lt;/h2&gt;</code>
-					</td>
-					<td>
-						<h2>Header 2</h2>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<code>&lt;h3&gt;Header 3&lt;/h3&gt;</code>
-					</td>
-					<td>
-						<h3>Header 3</h3>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<code>&lt;h4&gt;Header 4&lt;/h4&gt;</code>
-					</td>
-					<td>
-						<h4>Header 4</h4>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<code>&lt;h5&gt;Header 5&lt;/h5&gt;</code>
-					</td>
-					<td>
-						<h5>Header 5</h5>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<code>&lt;h6&gt;Header 6&lt;/h6&gt;</code>
-					</td>
-					<td>
-						<h6>Header 6</h6>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	<div class="subsection">
-		<h3>Divisions</h3>
-		<p>The div element is used for parts of the document that can't be semantically described by other html block elements. It is usually used in combination with a class or id attribute.</p>
-		<code>&lt;div class="article"&gt;<br/>
-			&nbsp;&nbsp;&nbsp;Some very exciting news!<br/>
-			&lt;/div&gt;</code>
-		</div>
+		<div class="subsection">
+			<h3>
+				XHTML 1.1
+			</h3>
+			<p>
+				XHTML 1.1 is a form of xml and the strictest doctype. Forcing xml rules on the document. The browser doesn't care though.
+			</p><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;<br/>
+			&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;<br/>
+			&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</code>
+		</div> <!-- subsection -->
+
+		<div class="subsection"> 
+			<h3>HTML5</h3>
+			<p>The HTML5 doctype allowes code to be written far more loosely.</p>
+			<code>
+				&lt;!DOCTYPE html&gt;
+				<br/>
+				&lt;html&gt;
+			</code>
+		</div> <!-- subsection -->
+
+	</div> <!-- section -->
+	<div class="section" id="block">
+		<h2>
+			BLOCK elements
+		</h2>
+		<p>Block elements provide the main structure of the page. They consume the entire width available to them.</p>
+		<div class="subsection">
+			<h3>Headings</h3>
+			<p>We repressent headings with the <code>&lt;h1&gt;</code> element. The number represents the headings importance. 1 is the most impostant and 6 the least.</p>
+			<table>
+				<tbody>
+					<tr>
+						<th>Code</th>
+						<th>Result</th>
+					</tr>
+					<tr>
+						<td>
+							<code>&lt;h1&gt;Header 1&lt;/h1&gt;</code>
+						</td>
+						<td>
+							<h1>Header 1</h1>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<code>&lt;h2&gt;Header 2&lt;/h2&gt;</code>
+						</td>
+						<td>
+							<h2>Header 2</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<code>&lt;h3&gt;Header 3&lt;/h3&gt;</code>
+						</td>
+						<td>
+							<h3>Header 3</h3>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<code>&lt;h4&gt;Header 4&lt;/h4&gt;</code>
+						</td>
+						<td>
+							<h4>Header 4</h4>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<code>&lt;h5&gt;Header 5&lt;/h5&gt;</code>
+						</td>
+						<td>
+							<h5>Header 5</h5>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<code>&lt;h6&gt;Header 6&lt;/h6&gt;</code>
+						</td>
+						<td>
+							<h6>Header 6</h6>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div> <!-- subsection -->
+		<div class="subsection">
+			<h3>Divisions</h3>
+			<p>The div element is used for parts of the document that can't be semantically described by other html block elements. It is usually used in combination with a class or id attribute.</p>
+			<code>&lt;div class="article"&gt;<br/>&nbsp;&nbsp;&nbsp;Some very exciting news!<br/>&lt;/div&gt;</code>
+		</div> <!-- subsection -->
 		<div class="subsection"> 
 			<h3>Paragraphs</h3>
 			<p>The paragraph element encloses paragraphs.</p>
-			<code>&lt;p&gt;<br/>
-				&nbsp;&nbsp;&nbsp;This is a paragraph.<br/>
-				&lt;/p&gt;</code>
-			</div>
-			<div class="subsection">
-				<h3>Tables</h3>
-				<p>A table in html contains 1  or more rows and 1 or more columns. In xhtml the rows should be inside a <code>&lt;tbody&gt;</code></p>
-				<table>
-					<tbody>
-						<tr>
-							<th>Code</th>
-							<th>Result</th>
-						</tr>
-						<tr>
-							<td><code>
-								&lt;table&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&lt;tbody&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Col 1&lt;/th&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Col 2&lt;/th&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;td&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	row 1, col 1<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;/td&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;td&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	row 1, col 2<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;/td&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;td&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	row 2, col 1<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;/td&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;td&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	row 2, col 2<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;/td&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
-								&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;<br/>
-								&lt;table&gt;<br/>
-							</code></td>
+			<code>&lt;p&gt;<br/>&nbsp;&nbsp;&nbsp;This is a paragraph.<br/>&lt;/p&gt;</code>
+		</div> <!-- subsection -->
+		<div class="subsection">
+			<h3>Tables</h3>
+			<p>A table in html contains 1  or more rows and 1 or more columns. In xhtml the rows should be inside a <code>&lt;tbody&gt;</code></p>
+			<table>
+				<tbody>
+					<tr>
+						<th>Code</th>
+						<th>Result</th>
+					</tr>
+					<tr>
+						<td><code>
+							&lt;table&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&lt;tbody&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Col 1&lt;/th&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Col 2&lt;/th&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;td&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	row 1, col 1<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;/td&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;td&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	row 1, col 2<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;/td&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;td&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	row 2, col 1<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;/td&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;td&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	row 2, col 2<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;/td&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;<br/>
+							&lt;table&gt;<br/>
+						</code></td>
+						<td>
+							<table>
+								<tbody>
+									<tr>
+										<th>col 1</th>
+										<th>col 2</th>
+									</tr>
+									<tr>	
+										<td>
+											row 1, col 1
+										</td>
+										<td>
+											row 1, col 2
+										</td>
+									</tr>
+									<tr>	
+										<td>
+											row 2, col 1
+										</td>
+										<td>
+											row 2, col 2
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>				
+		</div> <!-- subsection -->
+		<div class="subsection">
+			<h3>Lists</h3>
+			<p>
+				There are three main types of lists that can be described with HTML.
+			</p>
+			<ul>
+				<li>Oredered list</li>
+				<li>Unordered list</li>
+				<li>Definition list</li>
+			</ul>
+			<table>
+				<tbody>
+					<tr>
+						<th>Code</th>
+						<th>Result</th>
+					</tr>
+					<tr>
+						<td><strong>Ordered list</strong><br/>
+							<code>&lt;ol&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br/>
+								&lt;/ol&gt;</code>
+							</td>
 							<td>
-								<table>
-									<tbody>
-										<tr>
-											<th>col 1</th>
-											<th>col 2</th>
-										</tr>
-										<tr>	
-											<td>
-												row 1, col 1
-											</td>
-											<td>
-												row 1, col 2
-											</td>
-										</tr>
-										<tr>	
-											<td>
-												row 2, col 1
-											</td>
-											<td>
-												row 2, col 2
-											</td>
-										</tr>
-									</tbody>
-								</table>
+								<ol>
+									<li>Item 1</li>
+									<li>Item 2</li>
+									<li>Item 3</li>
+								</ol>
 							</td>
 						</tr>
-					</tbody>
-				</table>
-				
-			</div>
-		</div>
-		<div class="section">
-			<h2>
-				INLINE elements
-			</h2>
-		</div>
-	</body>
-	</html>
+						<tr>
+							<td><strong>Unordered list</strong><br/>
+								<code>&lt;ul&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br/>
+									&lt;/ul&gt;</code>
+								</td>
+								<td>
+									<ul>
+										<li>Item 1</li>
+										<li>Item 2</li>
+										<li>Item 3</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td><code>
+									&lt;dl&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&lt;dt&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 1<br/>
+									&nbsp;&nbsp;&nbsp;&lt;/dt&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&lt;dd&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 1 is a fictional generic item.<br/>
+									&nbsp;&nbsp;&nbsp;&lt;/dd&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&lt;dt&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 2<br/>
+									&nbsp;&nbsp;&nbsp;&lt;/dt&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&lt;dd&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See Item 1.<br/>
+									&nbsp;&nbsp;&nbsp;&lt;/dd&gt;<br/>
+									&lt;/dl&gt;</code>
+								</td>
+								<td>
+									<dl>
+										<dt>
+											Item 1
+										</dt>
+										<dd>
+											Item 1 is a fictional generic item.
+										</dd>
+										<dt>
+											Item 2
+										</dt>
+										<dd>
+											See Item 1.
+										</dd>
+									</dl>
+								</td>
+							</tr>	
+						</tbody>
+					</table>	
+				</div> <!-- subsection -->
+				<div class="subsection">
+					<h3>Horizontal rule</h3>
+					<p>A horizontal break between two sections.</p>
+					<table>
+						<tbody>
+							<tr>
+								<th>Code</th>
+								<th>Result</th>
+							</tr>
+							<tr>
+								<td><code>&lt;hr/&gt;</code></td>
+								<td><hr/></td>
+							</tr>
+						</tbody>
+					</table>
+				</div> <!-- subsection -->
+			</div> <!-- section -->
+			<div class="section" id="inline">
+				<h2>
+					INLINE elements
+				</h2>
+				<p>An inline element does not break the flow of the page.</p>
+				<div class="subsection">
+					<h3>Anchor (Link)</h3>
+					<p>The anchor element is used to link to other resources. The resource could be within your page or on an other page.</p>
+					<p> <a href="#doctypes">To the doctype section!</a></p>
+					<table>
+						<tbody>
+							<tr>
+								<th>Code</th>
+								<th>Result</th>
+							</tr>
+							<tr>
+								<td><code>&lt;a href="http://www.google.com&gt;This is a link to google&lt;/a&gt;</code></td>
+								<td><a href="http://www.google.com">This is a link to google</a></td>
+							</tr>
+							<tr>
+								<td><code>&lt;a href="#doctypes&gt;To the doctype section!&lt;/a&gt;</code></td>
+								<td><a href="#doctype">To the doctype section!</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div> <!-- subsection -->
+				<div class="subsection">
+					<h3>Images</h3>
+					<p>
+						Images can be included in your page with this tag <code>&lt;img src="img/devok.jpg /&gt;</code>.
+					</p>
+					<img src="img/devok.jpg" alt="Dog" />
+					<img src="http://30.media.tumblr.com/tumblr_lxq79l4COQ1rnnxebo1_400.png" alt="Catbat!" />
+				</div> <!-- subsection -->
+				<div class="subsection">
+					<h3>Span</h3>
+					<p>The span element is the inline equivalent of a div. It can be used to mark up elements that can not be described by any other element.</p>
+					<p>Example: I read <span class="book">The art of computer programming</span>.</p>
+					<p>Code: <code>I read &lt;span class="book"&gt;The art of computer programming&lt;/span&gt;.</code></p>
+				</div> <!-- subsection -->
+				<div class="subsection">
+					<h3>Strong</h3>
+					<p>The strong element is used for lifting out text that is <strong>important</strong>.</p>
+					<p><code>&lt;strong&gt;Important!&lt;/strong&gt;</code></p>
+				</div> <!-- subsection -->
+				<div class="subsection">
+					<h3>Emphasis</h3>
+					<p>The Emphasis element is used for lifting out text that is <em>important</em> but not as important as <strong>strong</strong> text.</p>
+					<p><code>&lt;em&gt;Important!&lt;/em&gt;</code></p>
+				</div> <!-- subsection -->
+			</div> <!-- section -->
+		</body>
+		</html>

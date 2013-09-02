@@ -18,7 +18,7 @@ body {
 }
 
 .topBackgroundImageContainer {
-	height: 400px;
+	height: 350px;
 	width: 100%;
 	background-image: url("../img/background-blue.jpg");
 	background-size: 100%;
@@ -31,7 +31,7 @@ body {
 .mainContentContainer {
 	width: 100%;
 	position: relative;
-	top:400px;
+	top:350px;
 	/*background:white;*/
 	z-index: 10;
 }
