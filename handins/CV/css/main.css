@@ -20,14 +20,14 @@ body {
 .topBackgroundImageContainer {
 	height: 500px;
 	width: 100%;
-background: #6da5d9; /* Old browsers */
-background: -moz-linear-gradient(top,  #6da5d9 0%, #6ca5d9 35%, #76afdd 46%, #89c4e3 62%, #8fcbe7 69%, #90cce7 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6da5d9), color-stop(35%,#6ca5d9), color-stop(46%,#76afdd), color-stop(62%,#89c4e3), color-stop(69%,#8fcbe7), color-stop(100%,#90cce7)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #6da5d9 0%,#6ca5d9 35%,#76afdd 46%,#89c4e3 62%,#8fcbe7 69%,#90cce7 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #6da5d9 0%,#6ca5d9 35%,#76afdd 46%,#89c4e3 62%,#8fcbe7 69%,#90cce7 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #6da5d9 0%,#6ca5d9 35%,#76afdd 46%,#89c4e3 62%,#8fcbe7 69%,#90cce7 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #6da5d9 0%,#6ca5d9 35%,#76afdd 46%,#89c4e3 62%,#8fcbe7 69%,#90cce7 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6da5d9', endColorstr='#90cce7',GradientType=0 ); /* IE6-9 */
+	background: #6da5d9; /* Old browsers */
+	background: -moz-linear-gradient(top,  #6da5d9 0%, #6ca5d9 35%, #76afdd 46%, #89c4e3 62%, #8fcbe7 69%, #90cce7 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6da5d9), color-stop(35%,#6ca5d9), color-stop(46%,#76afdd), color-stop(62%,#89c4e3), color-stop(69%,#8fcbe7), color-stop(100%,#90cce7)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #6da5d9 0%,#6ca5d9 35%,#76afdd 46%,#89c4e3 62%,#8fcbe7 69%,#90cce7 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #6da5d9 0%,#6ca5d9 35%,#76afdd 46%,#89c4e3 62%,#8fcbe7 69%,#90cce7 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #6da5d9 0%,#6ca5d9 35%,#76afdd 46%,#89c4e3 62%,#8fcbe7 69%,#90cce7 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #6da5d9 0%,#6ca5d9 35%,#76afdd 46%,#89c4e3 62%,#8fcbe7 69%,#90cce7 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6da5d9', endColorstr='#90cce7',GradientType=0 ); /* IE6-9 */
 
 	background-size: 100%;
 	position: fixed;
@@ -93,7 +93,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6da5d9', end
 	margin-top: -45px;
 	margin-bottom: 45px;
 	width: 100%;
-	height: 75px;
+	min-height: 75px;
 	border-style: solid;
 	border-color: transparent;
 	border-top: 30px;
