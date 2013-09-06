@@ -93,7 +93,7 @@ body {
 	margin-top: -45px;
 	margin-bottom: 45px;
 	width: 100%;
-	min-height: 75px;
+	/*min-height: 75px;*/
 	border-style: solid;
 	border-color: transparent;
 	border-top: 30px;
@@ -109,6 +109,20 @@ body {
 	font-size: 36px;
 	color:white;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+.menuBar ul {
+	margin-top: 15px;
+	margin-bottom: 5px;
+	display:inline-block;
+	list-style: none;
+	position:relative;
+}
+
+.menuBar ul li {
+	float: left;
+	margin: 0 30px;
 }
 
 .mainTitle {
