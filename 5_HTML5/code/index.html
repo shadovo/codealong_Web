@@ -1,0 +1,552 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>HTML Reference</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<link href="css/main.css"  rel="StyleSheet" type="text/css" />
+		<!--<link href="css/print.css" media="print" rel="StyleSheet" type="text/css" />	
+		<link href="css/tablet.css" media="only screen and (min-device-width: 768px) and (max-device-width: 1024px)" rel="StyleSheet" type="text/css"/>
+		<link href="css/retina.css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" rel="StyleSheet" type="text/css" />-->
+	</head>
+	<body>
+		<h1>HTML Reference</h1>
+		<div class="section" id="toc">
+			<h2>Table of contents</h2>
+			<ul>
+				<li>
+					<a href="#doctypeSection">Doctype Section</a>
+					<ul>
+						<li>
+							HTML 4.01
+						</li>
+						<li>
+							XTML
+						</li>
+						<li>
+							HTML5
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#blockElements">Block Elements</a>
+					<ul>
+						<li>
+							Heading
+						</li>
+						<li>
+							Divisions
+						</li>
+						<li>
+							Table
+						</li>
+						<li>
+							Paragraphs
+						</li>
+						<li>
+							Lists
+						</li>
+						<li>
+							Horizontal Rule
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#inlineElements">Inline Elements</a>
+					<ul>
+						<li>
+							Anchor
+						</li>
+						<li>
+							Span
+						</li>
+						<li>
+							Image
+						</li>
+						<li>
+							Strong
+						</li>
+						<li>
+							Emphasis
+						</li>
+						<li>
+							Object
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#formElements">Form Elements</a>
+					<ul>
+						<li>
+							Form
+						</li>
+						<li>
+							Input
+							<ul>
+								<li>
+									Text
+								</li>
+								<li>
+									Button
+								</li>
+								<li>
+									Checkbox
+								</li>
+								<li>
+									Radio
+								</li>
+								<li>
+									File
+								</li>
+							</ul>
+						</li>
+						<li>
+							Select
+						</li>
+						<li>
+							TextArea
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="mainContent">
+			<div class="section" id="doctypeSection" >
+				<h2>Doctypes</h2>
+				<p>
+					Doctypes appear at the very top of the html document. They tell the browser how it should interperit the page.
+				</p>
+				<h3>HTML 4.01</h3>
+				<p>
+					<code>
+						&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
+						&quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;</code>
+				</p>
+				<h3>HTML5</h3>
+				<p>
+					<code>
+						&lt;!DOCTYPE html&gt;</code>
+				</p>
+				<h3>XHTML</h3>
+				<p>
+					<code>
+						&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.1//EN&quot; &quot;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd&quot;&gt;
+						<br/>
+						&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;</code>
+				</p>
+			</div>
+			<hr/>
+			<div class="section" id="blockElements">
+				<h2>Block Elements</h2>
+				<p>
+					Block elements in html take consume all the width available and force a new line before and after the element.
+				</p>
+				<h3>Heading elements</h3>
+				<p>
+					We represent headings with the &lt;h &gt; element followed by a number from 1-6.
+					<br/>
+					The first being the most important heading and the sixth being the least.
+				</p>
+				<table>
+					<tbody>
+						<tr>
+							<td><code>
+								&lt;h1&gt; Heading 1&lt;/h1&gt;</code></td>
+							<td><h1>Heading 1</h1></td>
+						</tr>
+						<tr>
+							<td><code>
+								&lt;h2&gt; Heading 2&lt;/h2&gt;</code></td>
+							<td><h2>Heading 2</h2></td>
+						</tr>
+						<tr>
+							<td><code>
+								&lt;h3&gt; Heading 3&lt;/h3&gt;</code></td>
+							<td><h3>Heading 3</h3></td>
+						</tr>
+						<tr>
+							<td><code>
+								&lt;h4&gt; Heading 4&lt;/h4&gt;</code></td>
+							<td><h4>Heading 4</h4></td>
+						</tr>
+						<tr>
+							<td><code>
+								&lt;h5&gt; Heading 5&lt;/h5&gt;</code></td>
+							<td><h5>Heading 5</h5></td>
+						</tr>
+						<tr>
+							<td><code>
+								&lt;h6&gt; Heading 6&lt;/h6&gt;</code></td>
+							<td><h6>Heading 6</h6></td>
+						</tr>
+					</tbody>
+				</table>
+				<h3>Divisions</h3>
+				<p>
+					The <code>
+						&lt;div&gt;</code>
+					tag is used for parts of the document that can not be semantically described by other html elements.
+					It is usually used in combination with a class and or id attribute that describe the content.
+					<br/>
+					Example: <code>
+						<br/>
+						&lt;div class="article"&gt;
+						<br/>
+						&nbsp;&nbsp;&nbsp;&lt;h1&gt; Some very exciting news &lt;/h1&gt;
+						<br/>
+						&nbsp;&nbsp;&nbsp;&lt;img src="crazyPhoto.jpg" alt="just crazy /&gt;
+						<br/>
+						&lt;/div&gt; </code>
+				</p>
+				<h3>Table</h3>
+				<p>
+					A table in HTML contains or more rows and columns. Traditionally tables were used not only for representing tabular data but also for providing structural layout of a page.
+					This created really complicated tables. Nowadays with better control of layout in css tables should only be used when you want to show tabular data.
+				</p>
+				<table>
+					<tbody>
+						<tr>
+							<th>Code</th>
+							<th>Result</th>
+						</tr>
+						<tr>
+							<td>
+							<code>
+								&lt;table&gt;
+								<br/>
+								&nbsp;&nbsp;&nbsp;&lt;tbody&gt;
+								<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+								<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;COLUMN 1&lt;/th&gt;
+								<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;COLUMN 2&lt;/th&gt;
+								<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+								<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+								<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row 2 Column 1&lt;/td&gt;
+								<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row 2 Column 2&lt;/td&gt;
+								<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+								<br/>
+								&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;
+								<br/>
+								&lt;/table&gt;
+							</code></td>
+							<td>
+							<table>
+								<tbody>
+									<tr>
+										<th>COLUMN 1</th>
+										<th>COLUMN 2</th>
+									</tr>
+									<tr>
+										<td>Row 2 Column 1</td>
+										<td>Row 2 Column 2</td>
+									</tr>
+								</tbody>
+							</table></td>
+						</tr>
+					</tbody>
+				</table>
+				<h3>Paragraphs</h3>
+				<p>
+					The paragraph element &lt;p&gt; encloses paragraphs. It may only contain inline elements.
+					<br/>
+				</p>
+				<h3>Lists</h3>
+				<p>
+					There are three different types of list in HTML ordered lists <code>
+						&lt;ol&gt;</code>
+					, unordered lists <code>
+						&lt;ul&gt;</code>
+					and definition lists <code>
+						&lt;dl&gt;</code>
+					.
+				</p>
+				<dl>
+					<dt>
+						Unordered lists
+					</dt>
+					<dd>
+						<table>
+							<tbody>
+								<tr>
+									<th>Code</th>
+									<th>Result</th>
+								</tr>
+								<tr>
+									<td>
+									<code>
+										&nbsp;&nbsp;&nbsp;&lt;ul&gt;
+										<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Eggs&lt;/li&gt;
+										<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Bacon&lt;/li&gt;
+										<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Chips&lt;/li&gt;
+										<br/>
+										&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+									</code></td>
+									<td>
+									<ul>
+										<li>
+											Eggs
+										</li>
+										<li>
+											Bacon
+										</li>
+										<li>
+											Chips
+										</li>
+									</ul></td>
+								</tr>
+							</tbody>
+						</table>
+					</dd>
+					<dt>
+						Ordered lists
+					</dt>
+					<dd>
+						<table>
+							<tbody>
+								<tr>
+									<th>Code</th>
+									<th>Result</th>
+								</tr>
+								<tr>
+									<td>
+									<code>
+										&nbsp;&nbsp;&nbsp;&lt;ol&gt;
+										<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Cook Egg&lt;/li&gt;
+										<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Cook Bacon&lt;/li&gt;
+										<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Serve on plate&lt;/li&gt;
+										<br/>
+										&nbsp;&nbsp;&nbsp;&lt;/ol&gt;
+									</code></td>
+									<td>
+									<ol>
+										<li>
+											Cook Egg
+										</li>
+										<li>
+											Cook Bacon
+										</li>
+										<li>
+											Serve on plate
+										</li>
+									</ol></td>
+								</tr>
+							</tbody>
+						</table>
+					</dd>
+					<dt>
+						Definition lists
+					</dt>
+					<dd>
+						<table>
+							<tbody>
+								<tr>
+									<th>Code</th>
+									<th>Result</th>
+								</tr>
+								<tr>
+									<td>
+									<code>
+										&nbsp;&nbsp;&nbsp;&lt;dl&gt;
+										<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;Egg&lt;/dt&gt;
+										<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;
+										<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Almost round object, comes out of a chickens bottom, tastes great.
+										<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dd&gt;
+										<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;Crayfish&lt;/dt&gt;
+										<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;
+										<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large brown watery insect that Swedes like to eat in the Autumn
+										<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dd&gt;
+										<br/>
+										&nbsp;&nbsp;&nbsp;&lt;/dl&gt;
+									</code></td>
+									<td>
+									<dl>
+										<dt>
+											Egg
+										</dt>
+										<dd>
+											Almost round object, comes out of a chickens bottom, tastes great.
+										</dd>
+										<dt>
+											Crayfish
+										</dt>
+										<dd>
+											Large brown watery insect that Swedes like to eat in the Autumn
+										</dd>
+									</dl></td>
+								</tr>
+							</tbody>
+						</table>
+					</dd>
+				</dl>
+				<h3>Horizontal Rule</h3>
+				<p>
+					The horizontal rule <code>
+						&lt;hr&gt;</code>
+					creates a line stretching the entire width of the containing element.
+					<br/>
+					Example:
+					<br/>
+					&lt;hr/&gt;
+				</p>
+				<hr/>
+				<a href="#toc">top</a>
+			</div>
+			<hr/>
+			<div class="section" id="inlineElements">
+				<h2>Inline Elements</h2>
+				<p>
+					Inline elements don't break the flow of the page. They will take up the minimum amount of space required to represent their contents.
+				</p>
+				<h3>Anchor</h3>
+				<p>
+					The anchor element <code>
+						&lt;a&gt;</code>
+					is used for linking to other resources. The resource could be another page or it could be a resource within our current page.
+					<br/>
+					Example:
+				</p>
+				<table>
+					<tbody>
+						<tr>
+							<th>Code</th>
+							<th>Result</th>
+						</tr>
+						<tr>
+							<td><code>
+								&lt;a href=&quot;http://www.google.com&quot; &gt;link to google&lt;/a&gt;</code></td>
+							<td><a href="http://www.google.com">link to google</a></td>
+						</tr>
+						<tr>
+							<td><code>
+								&lt;a href=&quot;#toc&quot; &gt;link to table of contents&lt;/a&gt; </code> in this page.
+							<br/>
+							Where # followed by element id. </td>
+							<td><a href="#toc">link to table of contents</a></td>
+						</tr>
+					</tbody>
+				</table>
+				<h3>Span</h3>
+				<p>
+					The span element is the inline equivalent of the <code>
+						&lt;div&gt;</code>
+					element. It is used to that allow us to mark up text that can not be semantically described by other html elements.
+					<br/>
+					Example:
+					<br/>
+					&nbsp;I read <code>
+						&lt;span class="book"&gt;Fear and loathing in Las Vegas&lt;/span&gt;</code>
+					on holiday.
+				</p>
+				<h3>Image</h3>
+				<p>
+					Images can be included into your page using the <code>
+						&lt;img&gt;</code>
+					element. The following attributes must be included <code>
+						src</code>
+					and <code>
+						alt</code>
+					.
+					<br/>
+					Example:
+					<br/>
+				</p>
+				<table>
+					<tbody>
+						<tr>
+							<th>Code</th>
+							<th>Result</th>
+						</tr>
+						<tr>
+							<td><code>
+								&lt;img src=&quot;img/ducks-dog-masks.jpeg&quot; alt="cunning little quackers" /&gt;</code></td>
+							<td><img src="img/ducks-dog-masks.jpeg" alt="cunning little quackers"/></td>
+						</tr>
+					</tbody>
+				</table>
+				<h3>Object</h3>
+				<p>
+					A tag for loading an external resource into our page. Similar to an iFrame in html4 and html5.
+				</p>
+				<table>
+					<tbody>
+						<tr>
+							<th>Code</th>
+							<th>Result</th>
+						</tr>
+						<tr>
+							<td><code>
+								&lt;object data=&quot;http://www.9gag.com&quot; &gt;&lt;/object&gt;</code></td>
+							<td><!--<object data="http://www.9gag.com" ></object>--></td>
+						</tr>
+					</tbody>
+				</table>
+				<h3>Emphasis</h3>
+				<p>
+					Emphasis replaces the older <code>
+						&lt;i&gt;i&lt;/i&gt;</code>
+					but is more flexible and more logical to change in css.
+				</p>
+				<table>
+					<tbody>
+						<tr>
+							<th>Code</th>
+							<th>Result</th>
+						</tr>
+						<tr>
+							<td>Some of this <code>
+								&lt;em&gt;text&lt;/em&gt;</code> is <code>
+								&lt;em&gt;emphasised&lt;/em&gt;</code></td>
+							<td>Some of this <em>text</em> is <em>emphasised</em></td>
+						</tr>
+					</tbody>
+				</table>
+				<h3>Strong</h3>
+				<p>
+					Strong replaces the older <code>
+						&lt;b&gt;bold&lt;/b&gt;</code>
+					but is more flexible and more logical to change in css.
+				</p>
+				<table>
+					<tbody>
+						<tr>
+							<th>Code</th>
+							<th>Result</th>
+						</tr>
+						<tr>
+							<td>Some of this <code>
+								&lt;strong&gt;text&lt;/strong&gt;</code> is <code>
+								&lt;strong&gt;Strong&lt;/strong&gt;</code></td>
+							<td>Some of this <strong>text</strong> is <strong>Strong</strong></td>
+						</tr>
+					</tbody>
+				</table>
+				<br/>
+				<br/>
+				<br/>
+			</div>
+			<hr/>
+			<div class="section" id="formElements"></div>
+		</div>
+	</body>
+</html>

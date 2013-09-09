@@ -1,0 +1,55 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Helvetica, Arial, sans-serif;
+	background: url(../img/iPadBackgroundTexture-brown.png) repeat;
+	color: #CCC;
+}
+
+h1 {
+	background: url(../img/iPadBackgroundTexture-grey.png) repeat;
+	padding: 30px;
+	margin: 0px;
+	color: #fff;
+}
+
+h2, h3 {
+	color: #eee;
+}
+
+a {
+	color: #222;
+}
+
+a:visited {
+}
+
+a:hover {
+	color: #444;
+}
+
+a:active {
+}
+
+ul {
+	line-height: 2em;
+}
+
+code {
+	font: italic 0.9em "Courier New", Courier, monospace;
+	color: #ddd;
+}
+
+#toc {
+	width: 15em;
+	float: left;
+	margin-top: 0px;
+}
+
+#mainContent {
+	margin-left: 16em;
+}
+
+.section {
+	margin: 10px;
+}

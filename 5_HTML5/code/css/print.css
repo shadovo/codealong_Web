@@ -1,0 +1,13 @@
+#mainContent{
+	margin-left:0px;
+}
+body, h1, h2, h3{
+	color:black;
+}
+a[href^="#toc"]{
+	display:none;
+}
+h1{
+	padding:0px;
+	padding-bottom: 10px;
+}
