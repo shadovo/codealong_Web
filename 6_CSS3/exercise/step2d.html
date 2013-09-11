@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><meta charset="utf-8" />
+        <title>Boxing the layout</title><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="apple-touch-icon-precomposed" href="http://localhost/resources/img/icon.png"/>
+        <link rel="apple-touch-icon" href="http://localhost/resources/img/icon.png" />
+        <meta name="format-detection" content="telephone=no" /><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black" />
+ 
+        <style>
+            html {
+                height:100%;
+            }
+            body {
+                height:100%;
+                margin: 0;
+                padding: 0;
+            }
+            .box {
+                height: 100%;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+            }
+            .titlebar {
+                background-image: -webkit-linear-gradient(bottom, rgb(176,14,54) 15%, rgb(214,17,17) 65%);
+                border-bottom: 1px solid #666;
+                height: 42px;
+            }
+            h1 {
+                color: #FFF;
+                font: bold 20px Arial, "MS Trebuchet", sans-serif;
+                margin: 0 auto;
+                padding: 10px 0;
+                text-align: center;
+                white-space: nowrap;
+            }
+            .content {
+                -webkit-box-flex: 1;
+            }
+            .menubar {
+                display: -webkit-box;
+                -webkit-box-orient: horizontal;
+                border-top: 1px solid #333;
+                background-image:  -webkit-linear-gradient(top,  #27282b 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+                text-align: center;
+            }
+            .menubar > * {
+                -webkit-box-flex: 1;
+                font-size: .8em;
+                height: 1.2em;
+                padding: 26px 0
+                .4em 0;
+                color: #808184;
+                text-decoration: none;
+                margin: .3em;
+                display: block;
+                width: 1px;
+            }
+            .menuIcon {
+                font: bold 24px/26px inherit;
+                height: 26px;
+                margin-top: -26px;
+                text-align: center;
+                text-shadow: rgba(255,255,255,0.3) 1px 1px 0px;
+            }
+            .menuActive {
+                background: -webkit-linear-gradient(bottom, rgb(176,14,54) 15%, rgb(214,17,17) 65%);
+                color: #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <header class="titlebar">
+                <h1>This is a really really cooooooooooooooool page</h1>
+            </header>
+            <div class="content">
+                content
+            </div>
+            <nav class="menubar">
+                <div>
+                    <div class="menuIcon">
+                        &szlig;
+                    </div>
+                    search
+                </div>
+                <div class="menuActive">
+                    <div class="menuIcon">
+                        2
+                    </div>
+                    result
+                </div>
+                <div>
+                    <div class="menuIcon">
+                        3
+                    </div>
+                    item 3
+                </div>
+                <div>
+                    <div class="menuIcon">
+                        4
+                    </div>
+                    item 4
+                </div>
+            </nav>
+        </div>
+    </body>
+</html>

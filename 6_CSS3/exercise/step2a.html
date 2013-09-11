@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Mobile template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="apple-touch-icon-precomposed" href="http://localhost/resources/img/icon.png"/> 
+  <link rel="apple-touch-icon" href="http://localhost/resources/img/icon.png" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+
+  <style>
+  /* We remove margins, padding and make our body fill the screen. */
+  body{
+    margin: 0;
+    padding: 0;
+    height:100%;
+  }
+  html {
+    height:100%;
+  }
+  /* We give our titlebar a height of 40px and color it red.*/
+  .titlebar{
+    height: 40px;
+    background-color: red;
+  }
+  .content{
+   -webkit-box-flex: 1;
+ }
+ /* We give our menu a height of 40px and color it blue.*/
+ .menubar {
+    height: 40px;
+    background-color: blue;
+  }
+  .box {
+    height: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+  </style>
+</head>
+<body>
+  <div class="box">
+   <header class="titlebar">titlebar</header>
+   <div class="content">content</div>
+   <nav class="menubar">menubar</nav>
+ </div>
+</body>
+</html>
