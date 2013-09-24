@@ -1,0 +1,19 @@
+<!doctype html>
+<script>
+	// Open this file in chrome.
+	// In the script tab of developers tools create a breakpoint at line 10
+	// Reload the page.
+	// Using the button to the right of developers tools step through the code
+	// Look atthe call stack tab and see how it grows and then shrinks as we
+	// step through the different function calls.
+	var funcA = function () {
+		return funcB();
+	};
+	var funcB = function () {
+		return funcC();
+	};
+	var funcC = function () {
+		return "C";
+	};
+	console.log(funcA());
+</script>

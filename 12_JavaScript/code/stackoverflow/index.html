@@ -1,0 +1,16 @@
+<!DOCTYPE htaml>
+<script type="text/javascript">
+function a() {
+    'use strict';
+    // console.log("a");
+    return b();
+}
+
+function b() {
+    'use strict';
+    // console.log("b");
+    return a();
+}
+a();
+
+</script>

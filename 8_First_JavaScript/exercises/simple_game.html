@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Simple Game</title>
+    <script>
+    var correctNumber = 4,
+        maxTries = 3,
+        atempt = 1
+        failing = true,
+        guess = -1;
+    alert("You have 3 tires to guess a number between 1 - 10");
+    while (atempt <= maxTries && failing) {
+        guess = -1;
+        guess = Number(prompt("Guess a number between 1 - 10"));
+        if (guess > 0 && guess < 11) {
+            if (guess === correctNumber) {
+                failing = false;
+                alert("You guessed correctly!");
+            } else if (atempt !== maxTries) {
+                alert("You guessed incorrectly, you have " + (maxTries - atempt) + " atempt" + (((maxTries - atempt) === 1) ? "" : "s") + " left. \n\n The correct number is " + (correctNumber > guess ? "higher" : "lower") + ".");
+            }
+            atempt++;
+        } else {
+            alert("The number was not between 1 - 10");
+        }
+    }
+    if (failing) {
+        alert("You failed to find the numbers within 3 tries. \n\n The correct number was " + correctNumber + ".");
+    }
+    </script>
+</head> 

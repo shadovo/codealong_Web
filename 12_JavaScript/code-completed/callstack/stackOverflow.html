@@ -1,0 +1,13 @@
+<!doctype html>
+<script>
+	// This example will create a stack overflow.
+	// We continuously add to our call stack and never remove anything.
+	// A bit like an endless loop a stack overflow will cause our code to crash.
+	function chicken (){
+		return egg();
+	}
+	function egg () {
+		return chicken();
+	}
+	console.log(chicken());
+</script>

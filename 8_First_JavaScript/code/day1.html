@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<script>
+	var aString = "Thomas";
+	var aNumber = 1;
+	var aBoolean = true;
+	var aFunction = function () {
+		return "hej";
+	};
+	var anObject = {};
+	var anUndefined;
+	
+	console.log(typeof aString);
+	console.log(typeof aNumber);
+	console.log(typeof aBoolean);
+	console.log(typeof aFunction);
+	console.log(typeof anObject);
+	console.log(typeof anUndefined);
+	
+	// Boolean
+	(1<2); // 1 less than 2
+	(10>10); // 10 greater than 10
+	(10>=10); // 10 greter than or equal to 10
+	(1===1); // 1 the exactly the same as 1
+	(1!==2); // 1 is not equal to 2
+	(1 < 2 && 2 > 3); // && is AND both sides must sides return true
+	(1 < 2 || 2 > 3); // || is OR one side must return true
+	((1 < 2 && 2 > 3)||(1 < 2 || 2 > 3)); // use brackets to specify which will be executed first
+	
+	// if statement
+	if(1<2){
+		console.log("it's less than");
+	} else {
+		console.log("it's greater than");
+	}
+	
+	// loops
+	var i = 0;
+	while(i<=10){
+		if(i===5){
+			break;
+		}
+		console.log(i);
+		i = i + 1;
+	}
+		
+	// for loop
+	for(var z = 0; z<=10; z = z+1){
+		console.log(z);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
