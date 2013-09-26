@@ -3,6 +3,7 @@
 triv.logic = (function () {
     'use strict';
     var questions = [];
+
     function askQuestion(question) {
         var answer;
         do {
@@ -19,6 +20,7 @@ triv.logic = (function () {
         triv.ui.showWrong(question);
         return false;
     }
+
     function getQuestion() {
         if (questions.length < 2) {
             questions = _.shuffle(triv.questions);

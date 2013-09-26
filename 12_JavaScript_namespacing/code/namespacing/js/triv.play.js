@@ -18,12 +18,3 @@ triv.play = function () {
 triv.play();
 var a, b;
 
-function a() {
-    'use strict';
-    return b();
-}
-
-function b() {
-    'use strict';
-    return a();
-}
