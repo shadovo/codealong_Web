@@ -32,14 +32,12 @@
 
 		// 4) Add left padding of 100px to the second paragraph. Hint check style, by logging your element to console with the console.dir function.
 		
-		para2.style.padding = '100px';
+		para2.style.paddingLeft = '100px';
 
 		// 5) Create a function that you attach to paragraph 2's onclick event. The function should toggle a green class to paragraph 3. 
 
 		para2.onclick = function() {
-			para3.classList.toggle("green");
-			var colorWord = para3.classList.contains("green") ? "white" : "green";
-			para2.innerText = "Click on me to turn the third paragraph " + colorWord;
+			para2.innerText = "Click on me to turn the third paragraph " + (para3.classList.toggle("green") ? "white" : "green");
 		};
 
 		// 6) Use the console.dir() function to see all the properties and see if you can figure out how to toggle, (switch on and off a class).
