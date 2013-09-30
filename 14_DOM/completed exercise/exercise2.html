@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>getting values</title>
+		<style>
+		.button {
+			background-color: blue;
+			padding:10px;
+			margin-left: 5px;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>getting values</h1>
+		<div/>
+			<p>Question: <span id="question"></span></p>
+			<p>Answer: <span id="answer"></span></p>
+			<p><span class="button" id="previous">Previous</span><span class="button" id="next">Next</span></p>
+		</div>
+	</body>
+
+
+	<script>
+	var questions = [{
+		question: "What is the highest Mountain in the world?",
+		answer: "Everest"
+	},{
+		question: "What is the capital of the UK?",
+		answer: "London"
+	},{
+		question: "What is the capital of the Sweden?",
+		answer: "Stockholm"
+	}];
+	// Wire up the html above so when you click next you show the next question in the questions array. When you come to the last question hide the next span with style.display = "none";
+	// If you have time add a span for previous and wire it up so it goes to the previous question. Again hide previous if you are on the first question.
+	var nextSpan = document.querySelector("#next"),
+		previousSpan = document.querySelector("#previous"),
+	 	questionSpan = document.querySelector("#question"),
+	 	answerSpan = document.querySelector("#answer"),
+		i = 0;
+		
+	var display = function(newIndex) {
+		if(newIndex === questions.length -1){
+			nextSpan.style.display = "none";
+		} else {
+			nextSpan.style.display = "inline";
+		}
+		if(newIndex === 0 ){
+			previousSpan.style.display = "none";
+		} else {
+			previousSpan.style.display = "inline";
+		}
+		questionSpan.innerText = questions[newIndex].question;
+		answerSpan.innerText = questions[newIndex].answer;
+		i = newIndex;
+	};
+	display(i);
+
+
+	nextSpan.onclick = function(){
+		display(i + 1);	
+	};
+	previousSpan.onclick = function(){
+		display(i - 1);	
+	};
+	</script>
+</html>
