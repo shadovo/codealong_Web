@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+		<script>	
+			window.addEventListener("DOMContentLoaded", function(){
+				var h1 = document.querySelector("h1");
+				h1.addEventListener("click", function (e) {
+					console.log("click", e);
+				}, false);
+				h1.addEventListener("contextmenu", function (e){
+					alert("You right clicked on h1");
+					e.preventDefault();
+				}, false);
+			},false);
+
+			window.addEventListener("keydown", function (e) {
+				console.log("keydown", e);
+				if (e.keyCode === 49) {
+					alert("you pressed 1");
+				}
+			}, false);
+
+
+		</script>
+	</head>
+	<body>
+		<h1>Tom's test</h1>
+	</body>
+</html>
