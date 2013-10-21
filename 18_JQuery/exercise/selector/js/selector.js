@@ -27,11 +27,11 @@ $(function () {
         $("#myDiv").toggleClass("red");
     });
 
-    $(".crazyImage").click(function () {
-        if ($(this).attr("alt").indexOf("kitler") !== -1) {
-            $(this).siblings("div").toggleClass("green");
-        } else {
-            $(this).siblings("div").text("You clicked on : " + $(this).attr("alt"));
-        }
+    $(".crazyImage[alt*='kitler']").click(function () {
+        $(this).siblings("div").toggleClass("green");
+    });
+
+    $(".crazyImage:not([alt*='kitler'])").click(function () {
+        $(this).siblings("div").text("You clicked on : " + $(this).attr("alt"));
     });
 });
