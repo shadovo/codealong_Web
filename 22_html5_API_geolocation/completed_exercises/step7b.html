@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><meta charset="utf-8" />
+        <title>GPS</title><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="apple-touch-icon-precomposed" href="http://localhost/resources/img/icon.png"/>
+        <link rel="apple-touch-icon" href="http://localhost/resources/img/icon.png" />
+        <meta name="format-detection" content="telephone=no" /><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <style>
+            body {
+                margin:0px;
+                padding:0px;
+            }
+        </style>
+        <script>
+            (function() {
+                var filename = navigator.platform === 'iPad' ?'iPadSplash.png' : 'iPhoneSplash.png';
+                document.write('<link rel="apple-touch-startup-image" ' + 'href="http://localhost/resources/img/' + filename + '" />' );
+            }());
+        </script>
+        <script>
+
+            var drawMap = function(position) {
+                document.getElementById("map").src ="http://dev.openstreetmap.org/~pafciu17/?module=map&center="+ position.coords.longitude + "," + position.coords.latitude + "&zoom=15&type=mapnik&width="+window.innerWidth+"&height="+window.innerHeight+"&points="+ position.coords.longitude + "," + position.coords.latitude +",pointImagePattern:greenP";
+            };
+            
+            var positionError = function(error) {
+                var ERROR_CODES = ['', 'Permission denied', 'Position unavailable', 'Timeout'];
+                alert('Error ' + ERROR_CODES[error.code] + '<br/>'+ error.message);
+            };
+            
+            navigator.geolocation.getCurrentPosition(drawMap, positionError, {enableHighAccuracy:true});
+            
+        </script>
+    </head>
+    <body onload="powerUpGPS();">
+        <img id="map" src="http://vinofordinner.com/art/loading.gif"/>
+    </body>
+</html>

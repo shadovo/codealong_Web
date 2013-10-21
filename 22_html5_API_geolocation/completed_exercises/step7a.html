@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><meta charset="utf-8" />
+        <title>My first geolocation iPhone and Android web app</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="apple-touch-icon-precomposed" href="http://localhost/resources/img/icon.png"/>
+        <link rel="apple-touch-icon" href="http://localhost/resources/img/icon.png" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <script>
+            (function() {
+                var filename = navigator.platform === 'iPad' ?'iPadSplash.png' : 'iPhoneSplash.png';
+                document.write('<link rel="apple-touch-startup-image" ' + 'href="http://localhost/resources/img/' + filename + '" />' );
+            })();
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            var usePosition = function(position) {
+                document.write('Recieved coordinates from your device:<br>');
+                document.write('latitude: ' + position.coords.latitude +'<br/>');
+                document.write('longitude: ' + position.coords.longitude +'<br/>');
+                document.write('accuracy: ' + position.coords.accuracy +'<br/>');
+                document.write('altitude: ' + position.coords.altitude +'<br/>');
+                document.write('altitudeAccuracy: ' + position.coords.altitudeAccuracy +'<br/>');
+                document.write('heading: ' + position.coords.heading +'<br/>');
+                document.write('speed: ' + position.coords.speed +'<br/>');
+            };
+
+            var positionError = function(error) {
+                var ERROR_CODES = ['', 'Permission denied', 'Position unavailable', 'Timeout'];
+                document.write('Error ' + ERROR_CODES[error.code] + '<br/>'+ error.message);
+            };
+
+            navigator.geolocation.getCurrentPosition(usePosition, positionError, {enableHighAccuracy:true});
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+CACHE MANIFEST
+# v0.5
+CACHE:
+index.html
+js/reloadInfo.js
+NETWORK:
+*
+FALLBACK:
+img/working.jpg img/offline.jpg

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8" />
+    <title>My first geolocation iPhone and Android web app</title>
+</head>
+<body>
+    <div id="stopButton">STAP!!</div>
+    <script type="text/javascript">
+    var usePosition = function(position) {
+        document.write('Recieved coordinates from your device:<br>');
+        document.write('latitude: ' + position.coords.latitude +'<br/>');
+        document.write('longitude: ' + position.coords.longitude +'<br/>');
+        document.write('accuracy: ' + position.coords.accuracy +'<br/>');
+        document.write('altitude: ' + position.coords.altitude +'<br/>');
+        document.write('altitudeAccuracy: ' + position.coords.altitudeAccuracy +'<br/>');
+        document.write('heading: ' + position.coords.heading +'<br/>');
+        document.write('speed: ' + position.coords.speed +'<br/>');
+        console.log("ping");
+    };
+
+    var positionError = function(error) {
+        var ERROR_CODES = ['', 'Permission denied', 'Position unavailable', 'Timeout'];
+        document.write('Error ' + ERROR_CODES[error.code] + '<br/>'+ error.message);
+    };
+    var watchId = navigator.geolocation.watchPosition(usePosition, positionError, {enableHighAccuracy:true});
+
+    window.addEventListener("DOMContentLoaded", function(){
+        var sButton = document.querySelector("#stopButton");
+        sButton.onclick = function () {
+            navigator.geolocation.clearWatch(watchId);
+        }
+    }());
+    </script>
+</body>
+</html>

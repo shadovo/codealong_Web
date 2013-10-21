@@ -1,0 +1,9 @@
+CACHE MANIFEST
+# v0.2
+CACHE:
+../../resources/css/wui_v0.1.css
+../../resources/lib/iscroll/iscroll-3.7.1.js
+../../resources/js/wui_mini_v0.1.js
+js/geowiki.js
+NETWORK:
+*

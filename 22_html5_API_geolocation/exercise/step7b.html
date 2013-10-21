@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><meta charset="utf-8" />
+        <title>GPS</title>
+        <style>
+            body {
+                margin:0px;
+                padding:0px;
+            }
+        </style>
+        <script>
+            var drawMap = function(position) {
+                alert(' long: ' +position.coords.longitude + ' lat: ' + position.coords.latitude + ' accuracy: ' + position.coords.accuracy);
+
+                document.getElementById("map").src ="http://dev.openstreetmap.org/~pafciu17/?module=map&center=" + position.coords.longitude + "," + position.coords.latitude + "&zoom=18&type=mapnik&width=" + window.innerWidth +"&height=" + window.innerHeight + "&points=" + position.coords.longitude + "," + position.coords.latitude +",pointImagePattern:greenP";
+            };
+
+            var positionError = function(error) {
+                var ERROR_CODES = ['', 'Permission denied', 'Position unavailable', 'Timeout'];
+                alert('Error ' + ERROR_CODES[error.code] + '\n'+ error.message);
+            };
+
+            navigator.geolocation.getCurrentPosition(drawMap, positionError, {enableHighAccuracy:true});
+
+        </script>
+    </head>
+    <body >
+        <img id="map" src="http://vinofordinner.com/art/loading.gif"/>
+    </body>
+</html>

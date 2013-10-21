@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Step 6b Geo Wiki application</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no" />
+    <link rel="apple-touch-icon-precomposed" href="http://localhost/resources/img/icon.png"/> 
+    <link rel="apple-touch-icon" href="http://localhost/resources/img/icon.png" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <script>
+      (function() {
+        var filename = navigator.platform === 'iPad' ?'iPadSplash.png' : 'iPhoneSplash.png';
+        document.write('<link rel="apple-touch-startup-image" ' + 'href="http://localhost/resources/img/' + filename + '" />' );
+      })();
+    </script>
+    <link rel="stylesheet" href="../../resources/css/base.css" />
+    <link rel="stylesheet" href="../../resources/css/android.css" />
+    <script src="../../resources/js/controls.js"></script>
+    <script src="js/geowiki.js"></script>
+  </head>
+  <body> 
+    <div id="content"></div>
+    <script>
+      var compositePanel = function(){
+        that =  webkitUi.controls.panel();
+        that.titleBar = webkitUi.controls.titleBar();
+        that.mainContent = webkitUi.controls.panel();
+        that.setText = function(text){
+          that.mainContent.setText(text);
+        };
+        that.getElement().appendChild(that.titleBar.getElement());
+        that.getElement().appendChild(that.mainContent.getElement());
+       
+        return that;
+      };
+
+      //Define our panels
+      var searchPanel = compositePanel(); //note we now use our very own composite panel
+      searchPanel.titleBar.setText("Search"); // and set the titlebar for the search panel
+      var input = "<p>Search wikipedia, and find out when articles where adjusted.</p>";
+      input += "Search word: <input id='searchInput' type='text'/><br>";
+      input += "<select id='limitInput'>";
+      input += "<option value='1'>1</option>";
+      input += "<option value='2'>2</option>";
+      input += "<option value='3'>3</option>";
+      input += "<option value='4'>4</option>";
+      input += "</select>";
+      searchPanel.setText(input);
+      var submitButton = webkitUi.controls.buttons.normal();
+      submitButton.setText("Search");
+      submitButton.setOnClick(function(){
+        var search = document.getElementById("searchInput").value;
+        var limit = document.getElementById("limitInput").value;
+        resultsPanel.load(search,limit);
+        menuBar.setActive(resultsMenuTab);
+      });
+      searchPanel.getElement().appendChild(submitButton.getElement());
+    
+
+      var localResultsPanel = wikiPanel();
+      localResultsPanel.show = function(){
+          localResultsPanel.getElement().style.display = "-webkit-box";
+          var positionError = function(error){
+            var ERROR_CODES = ['', 'Permission denied', 'Position unavailable', 'Timeout'];
+            document.write('Error ' + ERROR_CODES[error.code] + '<br/>'+ error.message);
+          };
+          var usePosition = function(position){
+            localResultsPanel.geoload(position.coords.latitude, position.coords.longitude, 4);
+          };
+          navigator.geolocation.getCurrentPosition(usePosition, positionError, {enableHighAccuracy:true});
+        };
+        
+      var resultsPanel = wikiPanel();
+      resultsPanel.load("Einstein",7);
+  
+      //Create a menu tab and link it to a panel
+      var searchMenuTab = webkitUi.controls.menu.menuTab();
+      searchMenuTab.setIcon('S');
+      searchMenuTab.setPanel(searchPanel);
+      searchMenuTab.setText("Search");
+      
+      var resultsMenuTab = webkitUi.controls.menu.menuTab();
+      resultsMenuTab.setIcon('R');
+      resultsMenuTab.setPanel(resultsPanel);
+      resultsMenuTab.setText("Results");
+      
+      var localMenuTab = webkitUi.controls.menu.menuTab();
+      localMenuTab.setIcon('L');
+      localMenuTab.setPanel(localResultsPanel);
+      localMenuTab.setText("Local Results");
+    
+    
+      //Add the menu tab to a menuBar    
+      var menuBar = webkitUi.controls.menu.menuBar();
+      menuBar.menuTabs.addTab(searchMenuTab);
+      menuBar.menuTabs.addTab(resultsMenuTab);
+      menuBar.menuTabs.addTab(localMenuTab);
+      menuBar.setActive(searchMenuTab);
+    
+      // Render the controls on the page    
+      var content = document.getElementById("content");
+      content.appendChild(searchPanel.getElement());
+      content.appendChild(resultsPanel.getElement());
+      content.appendChild(localResultsPanel.getElement());
+      content.appendChild(menuBar.getElement());
+    </script>
+  </body>
+</html>

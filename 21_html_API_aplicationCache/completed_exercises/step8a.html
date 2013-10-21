@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" manifest="step8a.manifest">
+  <head>
+    <meta charset="utf-8" />
+    <title>Resources</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="apple-touch-icon-precomposed" href="http://localhost/resources/img/icon.png"/> 
+    <link rel="apple-touch-icon" href="http://localhost/resources/img/icon.png" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <script>
+      (function() {
+        var filename = navigator.platform === 'iPad' ?'iPadSplash.png' : 'iPhoneSplash.png';
+        document.write('<link rel="apple-touch-startup-image" ' + 'href="http://localhost/resources/img/' + filename + '" />' );
+      })();
+    </script>
+    <link rel="stylesheet" href="../resources/css/base.css" />
+    <link rel="stylesheet" href="../resources/css/iPhone.css" />
+    <script src="../resources/js/controls.js"></script>
+    <style>
+      th{padding:15px;color:#fff;text-shadow:1px 1px 1px #568F23;border:1px solid #93CE37;border-bottom:3px solid #9ED929;background-color:#9DD929;background:-webkit-gradient(linear,left bottom,left top,color-stop(0.02,rgb(123,192,67)),color-stop(0.51,rgb(139,198,66)),color-stop(0.87,rgb(158,217,41)));-webkit-border-top-left-radius:5px;-webkit-border-top-right-radius:5px;}
+      tr:nth-child(odd){background-color:#eee;}
+      tr:nth-child(even){background-color:#fff;}
+      a{display:block;padding:2px;margin:2px;border:1px solid #666;text-align:center;font-size:18px;font-weight:bold;text-decoration:inherit;color:inherit;-webkit-border-radius:8px;-webkit-tap-highlight-color:#333;text-shadow:rgba(255,255,255,0.7) 0 1px 0;}
+      .intro{background:-webkit-gradient( linear,left top,left bottom,from(#e2e2e2),to(#8c8a88),color-stop(0.5,#acadae),color-stop(0.5,#82807e) );}
+    </style>
+</head> 
+<body> 
+    <table>
+      <tr><th>Library</th><th>License</th><th>Links</th></tr>
+      <tr><td>iUi</td><td>New BSD</td><td><a class="intro" href="http://code.google.com/p/iui/wiki/Introduction">Intro</a><a class="demo" href="http://www.iui-js.org/mobile/demos.html#_home">demo</a></td></tr>
+      <tr><td>jQuery Touch</td><td>MIT</td><td><a class="intro" href="http://code.google.com/p/iui/wiki/Introduction">Intro</a><a class="demo" href="http://jqtouch.com/preview/demos/main/">demo</a></td></tr>
+      <tr><td>jQuery Mobile</td><td>GPL & MIT</td><td><a class="intro" href="http://jquerymobile.com/">Intro</a><a class="demo" href="http://jquerymobile.com/demos/1.0a2/#experiments/api-viewer/index.html">demo</a></td></tr>
+      <tr><td>Sencha Touch</td><td>GPL & custom commercial</td><td><a class="intro" href="http://www.sencha.com/products/touch/">Intro</a><a class="demo" href="http://dev.sencha.com/deploy/touch/examples/kitchensink/">demo</a></td></tr>
+      <tr><td>Cubiq's tools</td><td>MIT</td><td><a class="intro" href="http://cubiq.org/">blog</a><a class="demo" href="http://cubiq.org/iscroll">iscroll</a>
+        <a class="demo" href="http://cubiq.org/slide-in-menu">Slide in menu</a><a class="demo" href="http://cubiq.org/dropbox/accordion/?v1.0">Accordion</a>
+        <a class="demo" href="http://cubiq.org/playing-with-css3-gradients">Cool buttons</a></td></tr>
+			<tr><td>dojox.mobile</td><td>BSD/AFL</td><td><a class="intro" href="http://shaneosullivan.wordpress.com/2010/06/13/dojos-new-mobile-app-project/">Intro</a><a class="demo" href="http://download.dojotoolkit.org/release-1.5.0/dojo-release-1.5.0/dojox/mobile/tests/">demos</a>
+			  <a class="demo" href="http://download.dojotoolkit.org/release-1.5.0/dojo-release-1.5.0/dojox/mobile/tests/imageControlsApp/">Image widgets</a></td></tr>
+			<tr><td>Glyfish Icons</td><td>CC SA & a commercial no attribution</td><td><a class="intro" href="http://glyphish.com/">glyphish.com</a></tr>
+    </table>
+ </body>
+ </html>

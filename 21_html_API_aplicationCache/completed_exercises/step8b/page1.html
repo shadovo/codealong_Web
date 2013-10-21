@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" manifest="multipage.manifest">
+  <head>
+    <meta charset="utf-8" />
+    <title>Page 1</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no" />
+    <link rel="apple-touch-icon-precomposed" href="http://localhost/resources/img/icon.png"/> 
+    <link rel="apple-touch-icon" href="http://localhost/resources/img/icon.png" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+    <script>
+      (function() {
+        var filename = navigator.platform === 'iPad' ?'iPadSplash.png' : 'iPhoneSplash.png';
+        document.write('<link rel="apple-touch-startup-image" ' + 'href="http://localhost/resources/img/' + filename + '" />' );
+      })();
+    </script>
+    <style>
+    body{
+      font-size: 3em;
+    }
+    </style>
+  </head>
+  <body>
+    PAGE 1b 
+  </body>
+</html>
