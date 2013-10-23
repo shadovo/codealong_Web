@@ -1,0 +1,11 @@
+{
+  "name": "addStuff",
+  "version": "0.0.1",
+  "description": "A module for adding stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oscar Rundh",
+  "license": "BSD-2-Clause"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "addStuff",
+  "version": "0.0.1",
+  "description": "Testing node modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodeunit test.js"
+  },
+  "author": "Tom Blackmore",
+  "license": "BSD-2-Clause"
+}
