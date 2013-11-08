@@ -1,0 +1,12 @@
+{
+  "name": "memoryDb",
+  "version": "0.0.1",
+  "description": "Save objects and give them an id.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["Database"],
+  "author": "Tom Blackmore",
+  "license": "BSD-2-Clause"
+}

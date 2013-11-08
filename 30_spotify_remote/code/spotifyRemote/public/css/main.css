@@ -1,0 +1,57 @@
+#controls{
+    margin-left: auto;
+    margin-right: auto;
+    width:126px;
+
+}
+img, #container{
+    margin-left: auto;
+    margin-right: auto;
+    width:300px;
+    -webkit-user-select: none;
+}
+.play{
+    background-position: 0 0;
+}
+.play:hover{
+    background-position: -42px 0;
+}
+.pause{
+    background-position: -84px 0;
+    display:none;
+}
+.pause:hover{
+    background-position: -126px 0;
+}
+.stop{
+    background-position: -168px 0;
+}
+.stop:hover{
+    background-position: -210px 0;
+}
+.next{
+    background-position: 0 -42px;
+}
+.next:hover{
+    background-position: -42px -42px;
+}
+.previous{
+    background-position: -84px -42px;
+}
+.previous:hover{
+    background-position: -126px -42px;
+}
+.mute{
+    background-position: -168px -42px;
+}
+
+
+.controlButton{
+    float:left;
+    background-image: url(../img/audio-video-buttons.jpg);
+    border:0;
+    padding:0;
+    margin:0;
+    width:42px;
+    height:42px;
+}
